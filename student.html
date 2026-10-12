@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My student details | Campus Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+  <header class="topbar">
+    <a class="brand" href="student.html"><span class="brand-mark">C</span> Campus Portal</a>
+    <div class="topbar-right">
+      <span class="user-chip">Student · <strong id="student-username"></strong></span>
+      <button class="button button-secondary" type="button" data-sign-out>Sign out</button>
+    </div>
+  </header>
+  <main class="dashboard">
+    <div class="page-heading">
+      <div>
+        <h1 id="student-welcome">My student details</h1>
+        <p>Your college account information.</p>
+      </div>
+    </div>
+    <section class="panel student-card">
+      <h2>Student profile</h2>
+      <p class="inline-error" id="student-error" role="alert" hidden></p>
+      <div class="details-grid" id="student-details">
+        <div class="detail"><span>Student name</span><strong data-student-field="name"></strong></div>
+        <div class="detail"><span>Student ID</span><strong data-student-field="studentId"></strong></div>
+        <div class="detail"><span>Year</span><strong data-student-field="year"></strong></div>
+        <div class="detail"><span>Course</span><strong data-student-field="course"></strong></div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

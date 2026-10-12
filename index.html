@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102a43">
+  <title>Campus Portal | Sign in</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+  <main class="auth-layout">
+    <section class="welcome-panel">
+      <a class="brand" href="index.html" aria-label="Campus Portal home"><span class="brand-mark">C</span> Campus Portal</a>
+      <div class="welcome-copy">
+        <p class="eyebrow">YOUR COLLEGE, CONNECTED</p>
+        <h1>Everything you need for your campus journey.</h1>
+        <p>Sign in to view your student details, or create an account to get started.</p>
+      </div>
+      <p class="welcome-foot">A simple home for your college community.</p>
+    </section>
+
+    <section class="auth-card" aria-label="Account access">
+      <div class="auth-tabs" role="tablist" aria-label="Choose an account action">
+        <button class="tab-button is-active" id="login-tab" type="button" role="tab" aria-selected="true" aria-controls="login-panel">Sign in</button>
+        <button class="tab-button" id="signup-tab" type="button" role="tab" aria-selected="false" aria-controls="signup-panel">Student sign up</button>
+      </div>
+
+      <div id="login-panel" role="tabpanel" aria-labelledby="login-tab">
+        <h2>Welcome back</h2>
+        <p class="muted">Enter your account details to continue.</p>
+        <form id="login-form">
+          <label for="login-role">Account type</label>
+          <select id="login-role" name="role">
+            <option value="Student">Student</option>
+            <option value="Admin">Administrator</option>
+          </select>
+          <label for="login-username">Username</label>
+          <input id="login-username" name="username" type="text" autocomplete="username" required>
+          <label for="login-password">Password</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+          <p class="form-error" id="login-error" role="alert" hidden></p>
+          <button class="button button-primary button-wide" type="submit">Sign in</button>
+        </form>
+        <div class="demo-note"><strong>Demo admin access</strong><span>Username: admin &nbsp;·&nbsp; Password: 1234</span></div>
+      </div>
+
+      <div id="signup-panel" role="tabpanel" aria-labelledby="signup-tab" hidden>
+        <h2>Create your student account</h2>
+        <p class="muted">Enter your college details to register.</p>
+        <form id="signup-form">
+          <label for="signup-name">Student name</label>
+          <input id="signup-name" name="name" type="text" autocomplete="name" required maxlength="80">
+          <label for="signup-id">Student ID</label>
+          <input id="signup-id" name="studentId" type="text" required maxlength="30">
+          <div class="form-row">
+            <div>
+              <label for="signup-year">Year</label>
+              <select id="signup-year" name="year" required>
+                <option value="">Select year</option>
+                <option>1st Year</option>
+                <option>2nd Year</option>
+                <option>3rd Year</option>
+                <option>4th Year</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="signup-course">Course</label>
+              <input id="signup-course" name="course" type="text" required maxlength="80" placeholder="e.g. Computer Science">
+            </div>
+          </div>
+          <label for="signup-username">Choose a username</label>
+          <input id="signup-username" name="username" type="text" autocomplete="username" required minlength="3" maxlength="30">
+          <label for="signup-password">Choose a password</label>
+          <input id="signup-password" name="password" type="password" autocomplete="new-password" required minlength="6">
+          <p class="form-error" id="signup-error" role="alert" hidden></p>
+          <button class="button button-primary button-wide" type="submit">Create student account</button>
+        </form>
+      </div>
+      <p class="security-note">Demo application: accounts are stored in this browser and are not suitable for sensitive data.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
